@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bean & Bloom - CSS Framework</title>
+<!-- 1. CSS FRAMEWORK - Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  /* 2. CUSTOMIZATION - Brand Theme mattum override pannrom */
+  :root{ --bb-green:#0B3D2E; --bb-cream:#FFF8E7; --bb-pink:#F2C6C6; }
+  body{ background:var(--bb-green); color:var(--bb-cream); font-family:'Poppins',sans-serif; }
+  .bg-bb-green{ background-color:var(--bb-green) !important; }
+  .bg-bb-cream{ background-color:var(--bb-cream) !important; color:var(--bb-green) !important; }
+  .bg-bb-pink{ background-color:var(--bb-pink) !important; color:var(--bb-green) !important; }
+  .btn-bb-pink{ background:var(--bb-pink); color:var(--bb-green); font-weight:700; border:none; }
+  .btn-bb-pink:hover{ background:#E8A0A0; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR - Bootstrap Pre-built Component -->
+<nav class="navbar navbar-expand-lg bg-bb-green sticky-top">
+  <div class="container">
+    <a class="navbar-brand text-light fw-bold fs-3" href="https://helpful-cupcake-cf1046.netlify.app">BEAN & BLOOM</a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto gap-3">
+        <li class="nav-item"><a class="nav-link text-light fw-bold" href="#">SHOP</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">FLOWERS</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">COFFEE</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">SUBSCRIPTIONS</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">ABOUT</a></li>
+      </ul>
+      <span class="text-light fw-bold">🛒 CART (0)</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO - Bootstrap Grid + Utilities -->
+<div class="container py-5">
+  <div class="row align-items-center g-4">
+    <div class="col-12 col-lg-6">
+      <h1 class="display-4 fw-bold">FLOWERS & COFFEE,<br>CRAFTED DAILY</h1>
+      <p>Locally roasted espresso + seasonal peonies, delivered fresh.</p>
+      <button class="btn btn-light fw-bold px-4 py-2">Shop Bestsellers</button>
+      <button class="btn btn-outline-light px-4 py-2 ms-2">Subscribe & Save</button>
+      <p class="small mt-3 opacity-75">Free delivery on orders $50+ • Oakland, CA</p>
+    </div>
+    <div class="col-12 col-lg-6">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900" class="img-fluid rounded-3" alt="Latte with latte art and pink peonies">
+    </div>
+  </div>
+</div>
+
+<!-- BESTSELLERS - Bootstrap Card + Grid -->
+<div class="py-5" style="background:#1A5D44;">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">BESTSELLERS</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 rounded-3 overflow-hidden">
+          <span class="badge bg-bb-pink text-dark m-3 mb-0 align-self-start">BESTSELLER</span>
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600" class="card-img-top" alt="Espresso Blend coffee bag" style="height:230px;object-fit:cover;">
+          <div class="card-body text-center bg-bb-cream">
+            <h5 class="card-title fw-bold">ESPRESSO BLEND</h5>
+            <p class="card-text small">Dark Roast • 12oz / 340g</p>
+            <p>★★★★★ 124</p><h4>$18</h4>
+            <button class="btn btn-bb-pink w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 rounded-3 overflow-hidden">
+          <span class="badge bg-bb-pink text-dark m-3 mb-0 align-self-start">BESTSELLER</span>
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600" class="card-img-top" alt="Peony bouquet" style="height:230px;object-fit:cover;">
+          <div class="card-body text-center bg-bb-cream">
+            <h5 class="card-title fw-bold">PEONY BOUQUET</h5>
+            <p class="card-text small">Seasonal • 12-15 stems</p>
+            <p>★★★★★ 98</p><h4>$42</h4>
+            <button class="btn btn-bb-pink w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 rounded-3 overflow-hidden">
+          <span class="badge bg-bb-pink text-dark m-3 mb-0 align-self-start">BESTSELLER</span>
+          <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600" class="card-img-top" alt="Latte in ceramic cup" style="height:230px;object-fit:cover;">
+          <div class="card-body text-center bg-bb-cream">
+            <h5 class="card-title fw-bold">LATTE</h5>
+            <p class="card-text small">House Espresso • Milk • 12oz</p>
+            <div class="bg-bb-pink rounded p-3 mt-2">
+              <p class="fw-bold small">Join the Bloom Club — 10% off your first order</p>
+              <form class="d-flex gap-2">
+                <label for="email" class="visually-hidden">Email</label>
+                <input id="email" type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email" required>
+                <button class="btn btn-dark">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center py-4">
+  <p class="small mb-1">© 2024 BEAN & BLOOM • <a href="https://helpful-cupcake-cf1046.netlify.app" class="text-light">helpful-cupcake-cf1046.netlify.app</a></p>
+  <p class="small">FAQ • Shipping • Contact • Instagram • Privacy Policy</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
